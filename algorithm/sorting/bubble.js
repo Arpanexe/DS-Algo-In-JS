@@ -22,12 +22,13 @@ let noSwaps //Make bubble sort more efficient when array is mostly sorted
 function bubbleSort(array) {
     for (let i = 0; i < array.length; i++) {
         noSwaps = true
+        console.log(`*************************`)
         for (let j = 0; j < array.length - i - 1; j++) {
             iteration++
             if (array[j] > array[j + 1]) {
                 [array[j + 1], array[j]] = [array[j], array[j + 1]]
-                console.log(JSON.stringify(array))
                 noSwaps = false
+                console.log(JSON.stringify(array), array[j + 1], array[j])
             }
         }
         if (noSwaps) {
@@ -38,5 +39,5 @@ function bubbleSort(array) {
 }
 
 
-console.log(bubbleSort([64, 34, 25, 12, 22, 11, 90]))
+console.log(JSON.stringify(bubbleSort([64, 34, 25, 12, 22, 11, 90])))
 console.log(`Iteration : ${iteration}`)
