@@ -1,3 +1,14 @@
+/*
+Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, 
+calls itself for the two halves, and then merges the two sorted halves. 
+The merge() function is used for merging two halves. 
+
+Time Complexity: Best, average and worst case is O(nlog(n))
+
+Use case: 
+
+ */
+
 function mergeSort(arr) {
     if (arr.length <= 1) return arr
     let mid = Math.floor(arr.length / 2)
@@ -27,4 +38,5 @@ function merge(arr1, arr2) {
     return mergedArray
 }
 
-console.log(JSON.stringify(mergeSort([64, 34, 25, 12, 22, 11, 90])))
+//console.log(JSON.stringify(mergeSort([64, 34, 25, 12, 22, 11, 90])))
+console.log(JSON.stringify(mergeSort([24, 10, 76, 73])))
