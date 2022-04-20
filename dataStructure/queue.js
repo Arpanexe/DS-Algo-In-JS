@@ -38,8 +38,11 @@ class Queue {
         }
         this.size--
         console.log(`Value dequeued: ${removedNode.value}, Current size: ${this.size}`)
+        return removedNode
     }
 }
+
+module.exports = Queue
 
 const queue = new Queue()
 queue.enQueue(10)
