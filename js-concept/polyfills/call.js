@@ -8,3 +8,14 @@ Function.prototype.customCall = function (otherThis) {
     otherThis[propertyName] = this
     otherThis[propertyName](arguments[1])
 }
+
+//Testing
+const testObject = {
+    name: 'Arpan'
+}
+
+function test() {
+    console.log(`My name is ${this.name}`)
+}
+
+test.customCall(testObject)
