@@ -43,7 +43,7 @@ class Snake {
     }
 
     grow() {
-        this.#snakeList.unshift(this.#head)
+        this.#snakeList.push(this.#head)
     }
 
     move(nextCell) {
@@ -92,9 +92,9 @@ class Board {
 
         this.#cells = []
 
-        for (let row = 0 row < this.#rowCount row++) {
+        for (let row = 0; row < this.#rowCount; row++) {
             this.#cells.push([])
-            for (let col = 0 col < this.#colCount col++) {
+            for (let col = 0; col < this.#colCount; col++) {
                 this.#cells[row][col] = new Cell(row, col)
             }
         }
@@ -228,7 +228,7 @@ newGame.setDirection(Game.DIRECTION_RIGHT)
 
 // here I have just called the different methods
 // to show the functionality
-for (let i = 0 i < 5 i++) {
+for (let i = 0; i < 5; i++) {
     if (i === 2) {
         const board = newGame.getBoard()
         board.generateFood()
