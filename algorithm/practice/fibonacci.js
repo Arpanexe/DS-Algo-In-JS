@@ -14,7 +14,7 @@ function fibonacciMemoized(n, mem = []) {
     mem[n] = result
     return result
 }
-console.log(fibonacciMemoized(10))
+console.log(fibonacciMemoized(50))
 
 function fibonacciTabulation(n) {
     if (n <= 2) return 1
@@ -24,4 +24,4 @@ function fibonacciTabulation(n) {
     }
     return fibNums[n]
 }
-console.log(fibonacciTabulation(10))
+console.log(fibonacciTabulation(50))

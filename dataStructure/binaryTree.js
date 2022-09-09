@@ -14,6 +14,13 @@
  * 
  * DFS PreOrder:
  * Good when you want to export/flat the tree structure, so that it is easily reconstructed. Order is as per the tree structure i.e from root->left->right
+ * Depth First Traversals: 
+ * (a) In-order (Left, Root, Right) : 4 2 5 1 3 
+ * (b) Pre-order (Root, Left, Right) : 1 2 4 5 3 
+ * (c) Post-order (Left, Right, Root) : 4 5 2 3 1
+ * Pre-order: Used to create a copy of a tree. For example, if you want to create a replica of a tree, put the nodes in an array with a pre-order traversal. Then perform an Insert operation on a new tree for each value in the array. You will end up with a copy of your original tree.
+ * In-order: : Used to get the values of the nodes in non-decreasing order in a BST.
+ * Post-order: : Used to delete a tree from leaf to root
  */
 
 const Queue = require('./queue')

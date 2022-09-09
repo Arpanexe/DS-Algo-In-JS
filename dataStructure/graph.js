@@ -80,11 +80,14 @@ class Graph {
         const stack = []
         stack.push(value)
         visited[value] = true
+        let count = 0
         while (stack.length) {
             const currentVertex = stack.pop()
             result.push(currentVertex)
-            visited[currentVertex] = true
+            count++
+            //visited[currentVertex] = true //For Recursive we need to define here otherwise in loop
             for (const neighbor of this.adjacencyList[currentVertex]) {
+                count++
                 if (!visited[neighbor]) {
                     visited[neighbor] = true
                     stack.push(neighbor)
@@ -92,6 +95,7 @@ class Graph {
             }
         }
         console.log(`Visited vertexes Iterative: ${JSON.stringify(result)}`)
+        console.log(`Count: ${count}`)
         return result
     }
 
@@ -107,7 +111,7 @@ class Graph {
             for (const neighbor of this.adjacencyList[currentVertex]) {
                 if (!visited[neighbor]) {
                     visited[neighbor] = true
-                    queue.enQueue(neighbor)                    
+                    queue.enQueue(neighbor)
                 }
             }
         }
@@ -146,5 +150,5 @@ graph.addEdge('D', 'F')
 graph.addEdge('E', 'F')
 
 //graph.dfsRecursive('A')
-//graph.dfsIterative('A')
+graph.dfsIterative('A')
 graph.bfs('A')

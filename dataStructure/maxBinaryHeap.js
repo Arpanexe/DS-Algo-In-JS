@@ -48,7 +48,8 @@ class MaxBinaryHeap {
             let leftChild = this.values[leftChildIndex]
             let rightChild = this.values[rightChildIndex]
             let swap = null
-            if (leftChildIndex < this.values.length && leftChild > element) swap = leftChildIndex
+            if (leftChildIndex < this.values.length && leftChild > element)
+                swap = leftChildIndex
             if (rightChildIndex < this.values.length &&
                 ((swap !== null && rightChild > leftChild) ||
                     (swap === null && rightChild > element))) swap = rightChildIndex
