@@ -66,7 +66,7 @@ class Graph {
             visited[vertex] = true
             for (const neighbor of adjacencyList[vertex]) {
                 if (!visited[neighbor])
-                    return visitVertex(neighbor)
+                    visitVertex(neighbor)
             }
         }
         visitVertex(value)
@@ -149,6 +149,6 @@ graph.addEdge('D', 'E')
 graph.addEdge('D', 'F')
 graph.addEdge('E', 'F')
 
-//graph.dfsRecursive('A')
+graph.dfsRecursive('A')
 graph.dfsIterative('A')
-graph.bfs('A')
+//graph.bfs('A')
