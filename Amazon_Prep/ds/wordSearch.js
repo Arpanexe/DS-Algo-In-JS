@@ -12,6 +12,8 @@
  * 
  * Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
  * Output: false
+ * 
+ * https://leetcode.com/problems/word-search/
  */
 
 /**
@@ -61,5 +63,6 @@ const exist = function (board, word) {
     return false
 }
 
-exist([["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], 'ABCCED')
+//exist([["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], 'ABCCED')
+exist([["C","A","A"],["A","A","A"],["B","C","D"]],'AAB')
 console.log(counter)
